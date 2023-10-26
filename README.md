@@ -1,20 +1,45 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Azure Infrastructure with Terraform
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This repository contains Terraform code to provision Azure resources, including an Azure Resource Group, Azure Container Registry, Azure App Service Plan, and two Azure App Services.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+## Prerequisites
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+Before you begin, ensure you have the following:
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+1. [Terraform](https://www.terraform.io/downloads.html) installed on your local machine.
+2. Azure credentials configured. You can set them as environment variables or use Azure CLI to log in.
+3. Replace the placeholders in the `variables.tf` file with your specific configuration.
+
+## Usage
+
+1. Clone this repository to your local machine:
+
+   ```bash
+   git clone <repository_url>
+   cd <repository_directory>
+1. Initialize Terraform:
+
+terraform init
+
+2. Review the configuration in the .tf files and customize them as needed.
+
+3. Plan the infrastructure to ensure the changes are as expected:
+terraform plan
+
+4. Apply the changes to create Azure resources:
+
+terraform apply
+
+Configuration
+Make sure to update the variables.tf file with your specific configuration, including resource names, locations, and environment variables for the App Services.
+
+Resources Created
+Azure Resource Group
+Azure Container Registry
+Azure App Service Plan
+Two Azure App Services (Linux)
+
+
+Replace `<repository_url>` and `<repository_directory>` with the appropriate values for your repository URL and directory where you cloned this code.
+
+This README provides an overview of the repository, prerequisites, usage instructions, configuration customization, and information about the resources created. Make sure to include this README in your repository to help users understand and work with your Terraform configuration.
